@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>計程車執業登記證模擬測驗</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero__copy">
+          <p class="eyebrow">Taxi Driver Practice</p>
+          <h1 id="page-title">計程車執業登記證模擬測驗</h1>
+          <p class="hero__lead">
+            交通法令與各縣市地理環境題庫，每份考卷固定抽出是非題 25 題、選擇題 25 題。
+          </p>
+        </div>
+        <div class="meter-card" aria-label="題庫概況">
+          <span class="meter-card__number" id="totalQuestions">-</span>
+          <span class="meter-card__label">已匯入題目</span>
+          <span class="meter-card__sub" id="sourceSummary">讀取中</span>
+        </div>
+      </section>
+
+      <section class="setup-card" id="setupPanel" aria-labelledby="setup-title">
+        <div class="section-heading">
+          <p class="eyebrow">Setup</p>
+          <h2 id="setup-title">建立考卷</h2>
+        </div>
+
+        <div class="setup-grid">
+          <fieldset class="field-block">
+            <legend>考試科目</legend>
+            <label class="subject-card">
+              <input type="radio" name="subject" value="traffic_law" checked />
+              <span>
+                <strong>交通法令</strong>
+                <small>從交通法令題庫抽題</small>
+              </span>
+            </label>
+            <label class="subject-card">
+              <input type="radio" name="subject" value="geography" />
+              <span>
+                <strong>地理環境</strong>
+                <small>選擇縣市後抽題</small>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="field-block region-block" id="regionBlock">
+            <label for="regionSelect">地理環境縣市</label>
+            <select id="regionSelect"></select>
+            <p class="hint">只有選擇「地理環境」時會使用縣市設定。</p>
+          </div>
+        </div>
+
+        <div class="pool-panel">
+          <div>
+            <p class="pool-panel__label">目前可抽題量</p>
+            <p class="pool-panel__counts" id="poolCounts">-</p>
+          </div>
+          <button class="primary-btn" id="startExamBtn" type="button">開始模擬測驗</button>
+        </div>
+      </section>
+
+      <section class="exam-panel" id="examPanel" hidden aria-labelledby="exam-title">
+        <div class="exam-topbar">
+          <div>
+            <p class="eyebrow">Mock Exam</p>
+            <h2 id="exam-title">模擬測驗</h2>
+            <p class="exam-meta" id="examMeta">是非題 25 題 + 選擇題 25 題</p>
+          </div>
+          <div class="progress-box">
+            <span id="progressText">0 / 50</span>
+            <div class="progress-track" aria-hidden="true">
+              <span id="progressBar"></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="questionsList" class="questions-list"></div>
+
+        <div class="sticky-actions">
+          <button class="secondary-btn" id="backToSetupBtn" type="button">回設定</button>
+          <button class="primary-btn" id="submitExamBtn" type="button">交卷</button>
+        </div>
+      </section>
+
+      <section class="result-panel" id="resultPanel" hidden aria-live="polite">
+        <div id="resultSummary"></div>
+        <div class="result-actions">
+          <button class="secondary-btn" id="toggleMissedBtn" type="button">只看錯題</button>
+          <button class="secondary-btn" id="printBtn" type="button">列印結果</button>
+          <button class="primary-btn" id="newExamBtn" type="button">同條件重新出卷</button>
+        </div>
+      </section>
+    </main>
+
+    <noscript>此模擬測驗需要啟用 JavaScript。</noscript>
+    <script src="data/questions.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -689,3 +689,13 @@ select {
     width: 100%;
   }
 }
+
+.site-footer {
+  width: min(1180px, calc(100% - 32px));
+  margin: 8px auto 36px;
+  color: rgba(23, 19, 11, 0.78);
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+}
+

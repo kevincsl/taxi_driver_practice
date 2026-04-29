@@ -24,3 +24,9 @@ python .\scripts\build_question_bank.py
 - `data/questions.json`
 - `data/questions.js`
 - `data/markdown/*.md`
+
+## License
+MIT License
+
+Copyright (c) Chi-Hsien Lin <kevincsl@gmail.com>
+

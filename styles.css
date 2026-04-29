@@ -707,3 +707,7 @@ select {
   backdrop-filter: blur(8px);
 }
 
+.site-footer a {
+  color: inherit;
+}
+

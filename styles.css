@@ -59,7 +59,7 @@ button {
 .shell {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 36px 0 64px;
+  padding: 36px 0 108px;
 }
 
 .hero {
@@ -691,11 +691,19 @@ select {
 }
 
 .site-footer {
-  width: min(1180px, calc(100% - 32px));
-  margin: 8px auto 36px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  padding: 10px 16px;
   color: rgba(23, 19, 11, 0.78);
+  background: rgba(255, 253, 245, 0.92);
+  border-top: 1px solid var(--line);
   font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
   font-size: 0.9rem;
   text-align: center;
+  backdrop-filter: blur(8px);
 }
 

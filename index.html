@@ -3,8 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#153d36" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <title>計程車執業登記證模擬測驗</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/app-icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/app-icon.svg" />
   </head>
   <body>
     <main class="shell">
@@ -60,7 +66,10 @@
             <p class="pool-panel__label">目前可抽題量</p>
             <p class="pool-panel__counts" id="poolCounts">-</p>
           </div>
-          <button class="primary-btn" id="startExamBtn" type="button">開始模擬測驗</button>
+          <div class="pool-panel__actions">
+            <button class="secondary-btn install-btn" id="installAppBtn" type="button" hidden>安裝 App</button>
+            <button class="primary-btn" id="startExamBtn" type="button">開始模擬測驗</button>
+          </div>
         </div>
       </section>
 
@@ -100,5 +109,6 @@
     <noscript>此模擬測驗需要啟用 JavaScript。</noscript>
     <script src="data/questions.js"></script>
     <script src="app.js"></script>
+    <script src="pwa.js"></script>
   </body>
 </html>

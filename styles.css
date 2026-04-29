@@ -291,6 +291,12 @@ select {
   background: linear-gradient(120deg, var(--ink), var(--deep-green));
 }
 
+.pool-panel__actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 .pool-panel__label {
   margin-bottom: 4px;
   color: rgba(255, 248, 229, 0.72);
@@ -627,6 +633,11 @@ select {
   .exam-topbar,
   .pool-panel {
     align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pool-panel__actions {
+    width: 100%;
     flex-direction: column;
   }
 

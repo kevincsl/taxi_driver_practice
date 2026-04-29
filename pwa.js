@@ -16,7 +16,7 @@
     installButton.disabled = true;
   };
 
-  hideButton();
+  showButton();
 
   window.addEventListener("beforeinstallprompt", (event) => {
     event.preventDefault();
@@ -26,6 +26,7 @@
 
   installButton.addEventListener("click", async () => {
     if (!deferredPrompt) {
+      window.alert("此瀏覽器目前未提供自動安裝提示。請用瀏覽器選單中的「安裝應用程式 / Add to Home Screen」。");
       return;
     }
 
